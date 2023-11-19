@@ -1,5 +1,6 @@
 "use strict";
 
+// REAL CODE SHOULD NOW BE THIS CONFUSING
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
 
