@@ -77,3 +77,7 @@ const f = jonas.calcAge;
 // this.year anywhere, i think ou know why.
 // there is no owner to the function call
 // therefore it proves my point again.
+
+//this section is complete
+
+// go to Fdec.vs.Farr.js
