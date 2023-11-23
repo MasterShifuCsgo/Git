@@ -19,16 +19,16 @@ const jonas = {
   },
 
   // here this keyword inherits from its parent scope bc its an arrow funcition
-  const isMillenial = () => {
-    console. log(this);
-    console. log(this.year >= 1981 && this.year  <= 1996);
-    isMillenial();
+  isMillenial = () => {
+    console.log(this);
+    console.log(this.year >= 1981 && this.year  <= 1996);
 },
   greet: () => {
     console.log(`Hey ${this.firstName}`);
   },
 };
 
+jonas.isMillenial();
 jonas.greet(); //Hey undefined
 // this keyword does not exist in an arrow function
 // instead it gets the output form the surrounding scope;
