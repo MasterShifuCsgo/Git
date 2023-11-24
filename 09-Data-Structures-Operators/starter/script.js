@@ -42,13 +42,74 @@ const restaurant = {
       `Here is your delicous pasta with ${ing1}, ${ing2} and ${ing3}`
     );
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
+/*
+console.log("----- OR -----");
+// Use ANY data type, return ANY data type, short-circuting
+console.log(3 || "Jonas");
+console.log("" || "Jonas");
+console.log(true || 0);
+console.log(undefined || null);
+console.log(undefined || 0 || "" || "Hello" || 23 || null);
+
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+const guests2 = restaurant.numGuests || 10;
+
+console.log("----- AND -----");
+console.log(0 && "Jonas");
+// && is the oppisite of ||, and the last value gets returned if all is true
+console.log("Hello" && 2377 && null && "jonas");
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza("mushrooms", "spinach");
+}
+
+restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
+/*
+// 1) Destructuring
 //spread, on the right side of =
 const arr = [1, 2, ...[3, 4]];
 
 //Rest, because on left side on =
 const [a, b, ...others] = [1, 2, 3, 4, 5];
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+
+// Objects
+
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+// 2) Functions
+// rest parameters
+const add = function (...numbers) {
+  // rest packs values into an array
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+// rest packs values into an array
+add(2, 3);
+add(5, 3, 7, 2);
+add(8, 2, 5, 3, 2, 1, 4);
+
+const x = [23, 5, 7];
+// makes them into individual numbers
+add(...x);
+
+restaurant.orderPizza("mushrooms", "onion", "olives", "spinach"); // mushrooms, ["onion", "olives", "spinach"], output
+
+restaurant.orderPizza("mushrooms"); // [],  output
 
 /*
 const arr = [7, 8, 9];
