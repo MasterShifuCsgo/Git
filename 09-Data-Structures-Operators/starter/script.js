@@ -49,9 +49,51 @@ const restaurant = {
   },
 };
 
+const rest1 = {
+  name: "Capri",
+  numGuests: 0,
+};
+const rest2 = {
+  name: "La Piazza",
+  owner: "Giovanni Rossi",
+};
+
 /*
+//rest1.numGuests = rest1.numGuests || 10;
+//rest2.numGuests = rest2.numGuests || 10;
+
+//rest1.numGuests ||= 10;
+//rest2.numGuests ||= 10;
+
+// nullish means null or undefined
+//rest1.numGuests ??= 10;
+//rest2.numGuests ??= 10;
+
+rest2.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+rest1.owner = rest1.owner && "<ANONYMOUS>"; //undefined
+rest2.owner = rest2.owner && "<ANONYMOUS>";
+
+console.log(rest2);
+console.log(rest1);
+
+rest1.owner &&= "<ANONYMOUS>"; //undefined
+rest2.owner &&= "<ANONYMOUS>";
+
+/*
+restaurant.numGuests = 0;
+
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect); // all nullish values get ignored
+// 0 is a non nullish falue so 0 gets returned.
+
 console.log("----- OR -----");
 // Use ANY data type, return ANY data type, short-circuting
+/*
 console.log(3 || "Jonas");
 console.log("" || "Jonas");
 console.log(true || 0);

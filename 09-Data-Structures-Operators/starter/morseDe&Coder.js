@@ -153,4 +153,4 @@ function DeEncriptMorse(mCode, mode = 1) {
 const morse_code = [".-- .- -. -.. . .-. .-.. ..- ... -"];
 const letters_toMorse = ["PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS"];
 
-DeEncriptMorse(letters_toMorse, 2);
+//DeEncriptMorse(letters_toMorse, 2);
